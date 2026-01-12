@@ -1,5 +1,5 @@
 export interface Spaetirun {
-    id:string
+    id: string
     name: string
     createdAt: string
 }
