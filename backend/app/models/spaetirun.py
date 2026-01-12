@@ -1,7 +1,7 @@
 from sqlalchemy import Column, Integer, String, Boolean, DateTime
 from sqlalchemy.dialects.postgresql import UUID
 from sqlalchemy.sql import func
-from ..database import Base
+from ..db.database import Base
 
 class Spaetirun(Base):
     __tablename__ = "spaetirun"

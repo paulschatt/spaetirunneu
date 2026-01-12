@@ -12,7 +12,7 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 import { spaetirunService } from '../api/spaetirun'
-import type { Spaetirun, SpaetirunCreate } from '../types/spaetirun'
+import type { SpaetirunCreate } from '../types/spaetirun'
 
 export default defineComponent({
   name: 'Spaetirun',

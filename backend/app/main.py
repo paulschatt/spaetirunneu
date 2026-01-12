@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from .db.database import engine, Base
-from .routes import items
+from .routes import spaetirun
 
 # Create database tables
 Base.metadata.create_all(bind=engine)
@@ -11,14 +11,14 @@ app = FastAPI(title="Spaetirun API")
 # CORS middleware for Vue.js frontend
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173", "http://localhost:8080"],
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
 # Include routers
-app.include_router(items.router, prefix="/api/items", tags=["items"])
+app.include_router(spaetirun.SpaetirunRouter.router, prefix="/api/spaetirun", tags=["spaetirun"])
 
 @app.get("/")
 def read_root():
