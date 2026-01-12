@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
 import Home from '../views/Home.vue'
-import Items from '../views/Items.vue'
+import Spaetirun from '../views/Spaetirun.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -9,9 +9,9 @@ const routes: Array<RouteRecordRaw> = [
     component: Home
   },
   {
-    path: '/items',
-    name: 'Items',
-    component: Items
+    path: '/spaetirun',
+    name: 'Spaetirun',
+    component: Spaetirun
   }
 ]
 
